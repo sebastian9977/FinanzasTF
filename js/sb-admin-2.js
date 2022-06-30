@@ -169,7 +169,6 @@ function Sumar(){
     f2-=(cuota-(f2*(ResTES.innerText/100)));
   }
   var prima=(f2*0.01).toFixed(2);
-
   var f3 =(1+(ResCOk.innerText/100))**ResNroPeriodos.innerText;
   var VPCuotas=cuota*((f3-1)/(f3*(ResCOk.innerText/100)));
   var VPPrima=(prima/((1+(ResCOk.innerText/100))**ResNroPeriodos.innerText));
@@ -237,9 +236,6 @@ function Sumar(){
       x+=(cuota/((1+(i/100))**j));
     }
     x-=(parseFloat(ValorComercial.value)+parseFloat(ResCostesBonista.innerText));
-    console.log(i);
-    console.log(x);
-    console.log(menorBo);
     if(x<menorBo[1]&&x>0){
       menorBo =[i,x];
     }
@@ -256,9 +252,7 @@ function Sumar(){
       }
     }
     x-=(parseFloat(ValorComercial.value)+parseFloat(ResCostesBonista.innerText));
-    console.log(i);
-    console.log(x);
-    console.log(menorBo);
+
     if(x<menorBo[1]&&x>0){
       menorBo =[menorBoEnt+(i*0.01),x];
     }
